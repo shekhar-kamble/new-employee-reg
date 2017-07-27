@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Give India
+    // Bootstrap CSS
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/bootstrap-theme.min.css', rel='stylesheet')
+    link(href='//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css', rel='stylesheet')
+    link(href='//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css', rel='stylesheet')
+    link(href='css/form.css', rel='stylesheet')
+    
+  body
+    // Bootstrap js
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='js/form.js')
+    script(src='js/bootstrap.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js')
+    #navbar.navbar-collapse.collapse
+      // Static navbar
+      nav.navbar.navbar-default
+        .container-fluid
+          .navbar-header
+            a.navbar-brand(href='#') Give India
+        .container
+    block content
+        

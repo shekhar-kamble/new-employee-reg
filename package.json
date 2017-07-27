@@ -1,0 +1,20 @@
+{
+  "name": "new-employee",
+  "version": "1.0.0",
+  "description": "nodejs-mailer-jade-bootstrap api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"err:no test\" && exit 1"
+  },
+  "author": "Shekhar K",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "jade": "^1.11.0",
+    "node-mailer": "^0.1.1"
+  }
+}

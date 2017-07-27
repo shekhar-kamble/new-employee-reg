@@ -1,0 +1,122 @@
+extends layout
+
+block content
+    .container
+    form#new_emp_form.well.form-horizontal(action='/query/send', method='post')
+        fieldset
+            // Text input
+            .form-group
+                label.col-md-4.control-label Name
+                .col-md-4.inputGroupContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-user
+                        input.form-control(name='fname', placeholder='Name', type='text')
+            // Text input
+            .form-group
+                label.col-md-4.control-label Address
+                .col-md-4.inputGroupContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-home
+                        input.form-control(name='address', placeholder='Address', type='text')
+            // Text input
+            .form-group
+                label.col-md-4.control-label Zip-Code / Pin-Code
+                .col-md-4.inputGroupContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-home
+                        input.form-control(name='zip', placeholder='Zip Code', type='text')
+            // Text input
+            .form-group
+                label.col-md-4.control-label E-Mail
+                .col-md-4.inputGroupContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-envelope
+                        input.form-control(name='email', placeholder='E-Mail Address', type='text')
+            // Text input
+            .form-group
+                label.col-md-4.control-label Phone #
+                .col-md-4.inputGroupContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-earphone
+                        input.form-control(name='phone', type='text')
+            .form-group
+                label.col-md-4.control-label Date of Birth
+                .col-md-4.inputGroupContainer.date
+                    #datePicker.input-group.input-append.date
+                        span.input-group-addon.add-on
+                            span.glyphicon.glyphicon-calendar
+                        input.form-control(type='text', name='dob')
+            // Text input
+            .form-group
+                label.col-md-4.control-label Employee ID
+                .col-md-4.inputGroupContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-user
+                        input.form-control(name='empId', pattern='\\w{2}\\d{7}$', type='text')
+            // radio checks
+            .form-group
+                label.col-md-4.control-label Amount
+                .col-md-4
+                    .radio
+                        label
+                            input(type='radio', name='dAmount', value='110')
+                            |  110
+                    .radio
+                        label
+                            input(type='radio', name='dAmount', value='220')
+                            |  220
+                    .radio
+                        label
+                            input(type='radio', name='dAmount', value='550')
+                            |  550
+                    .radio
+                        label
+                            input(type='radio', name='dAmount', value='1100')
+                            |  1100
+                    .radio
+                        label
+                            input(type='radio', name='dAmount', value='other')
+                            |  other
+            // Select Basic
+            .form-group
+                label.col-md-4.control-label Preferred Cause
+                .col-md-4.selectContainer
+                    .input-group
+                        span.input-group-addon
+                            i.glyphicon.glyphicon-list
+                        select.form-control.selectpicker(name='cause')
+                            option(value=' ') Please select a Preferred Cause
+                            option Children
+                            option Disabled
+                            option Education
+                            option Elderly
+                            option Employment
+                            option Environment
+                            option Health
+                            option Human Rights
+                            option Women
+                            option  Youth
+            // Checkbox input
+            .form-group
+                label.col-md-4.control-label I am an India Citizen
+                .col-md-4.inputGroupContainer
+                    .checkbox.checkbox-inline
+                        input(type='checkbox', value='in' name='citizen')
+            // Success message
+            #success_message.alert.alert-success(role='alert')
+                | Success 
+                i.glyphicon.glyphicon-thumbs-up
+            // Button
+            .form-group
+                label.col-md-4.control-label
+                .col-md-4
+                    button.btn.btn-warning(type='submit')
+                        | Send 
+                        span.glyphicon.glyphicon-send
+// /.container
